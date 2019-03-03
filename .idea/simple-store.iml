@@ -4,8 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="database-sheet" />
-    <orderEntry type="module" module-name="json-example" />
-    <orderEntry type="module" module-name="pokemon-example" />
+    <orderEntry type="module" module-name="zoom-master" />
   </component>
 </module>

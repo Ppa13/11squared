@@ -26,6 +26,10 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- Scripts
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+
 </head>
 <body>
 
@@ -53,10 +57,9 @@
                 <div class="row">
                     <h5 class="item_name"></h5>
                     <div class="simpleStore_getDetail_container">
-                        <span class="item_price"></span>
-                        <h6 class="item_currency"></h6>
+                        <span class="item_price"></span>€
                     </div>
-                    <div class="simpleStore_getDetail_container">
+                    <div class="simpleStore_getDetail_container" id="details-btn">
                         <a class="button u-pull-right simpleStore_getDetail">Details</a>
                     </div>
                 </div>
@@ -70,19 +73,20 @@
         <div class="simpleCart_shelfItem simpleStore_detailView">
             <a href="#" class="close view_close">&times;</a>
 
-            <div class="row">
+            <div class="row" id="product-detail-template-row">
                 <div class="four columns">
-                    <img src="" class="item_thumb"/>
+                    <span class="zoom">
+                         <img src="" role="presentation" class="item_thumb" alt="t-shirt"/>
+                    </span>
                 </div>
+
                 <div class="eight columns">
                     <h5 class="item_name"></h5>
 
                     <p class="item_description"></p>
 
                     <div class="simpleStore_price">
-                        <span class="item_price"></span>
-                        <h6 class="item_currency"></h6>
-                        <p class="item_shipping"></p>
+                        <span class="item_price"></span>€ &nbsp;&nbsp; (shipping included - 3 to 14 days depending on location)
                     </div>
 
                     <div class="qty">
@@ -145,6 +149,15 @@
         <div class="notify">
 			<p class="notify_text"></p>
         </div>
+    </script>
+
+    <!-- Image Zoom -->
+
+    <script src='jquery.zoom.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('.item_thumb').zoom();
+        });
     </script>
 
 <!-- End Document

@@ -5,11 +5,6 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-h6{
-    font-size: 1.8rem;
-    margin: 0;
-}
-
 select {
     display: block;
     float: left;
@@ -44,7 +39,7 @@ a.hover {
 }
 
 .brand img {
-	max-height: 100px;
+	max-height: 160px;
 }
 
 .button.button-primary.u-pull-right.simpleStore_viewCart{
@@ -87,19 +82,40 @@ a.hover {
 }
 
 .item_thumb, .detail_thumb {
-    height: 150px;
+    width: 100%;
     display: block;
     margin: 0 auto;
     padding-bottom: 10px;
 }
 
-.item_thumb{
-    transition: transform .2s;
+#details-btn{
+    justify-content: flex-end;
 }
 
-.item_thumb:hover{
-    transform: scale(1.5);
+.zoom {
+    display:inline-block;
+    position: relative;
 }
+
+/* magnifying glass icon */
+.zoom:after {
+    content:'';
+    display:block;
+    width:33px;
+    height:33px;
+    position:absolute;
+    top:0;
+    right:0;
+    background:url(/icon.png);
+}
+
+.zoom img {
+    display: block;
+}
+
+.zoom img::selection { background-color: transparent; }
+
+
 
 .item_Quantity {
     display: inline-block;
@@ -116,6 +132,11 @@ a.hover {
 .item_description {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+}
+
+.product-detail-template-row{
+    display: flex;
+    align-items: center;
 }
 
 .headerRow {
@@ -196,6 +217,7 @@ a.hover {
 .simpleStore_detailView .item_add {
     margin: 0px;
     margin-bottom: 0px;
+    margin-top: 25em;
 }
 
 .simpleStore_detailView .item_name {
