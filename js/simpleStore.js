@@ -80,8 +80,6 @@ var simpleStore = {
         tmpl.find('.item_thumb').attr("src", product.image);
         tmpl.find('.item_name').text(product.name);
         tmpl.find('.item_price').text(product.price);
-        tmpl.find('.item_value').text(product.valuta);
-        tmpl.find('.item_shipping').text(product.shipping);
         tmpl.find('.item_description').text(product.description);
     },
 
@@ -173,6 +171,33 @@ var simpleStore = {
         return optionsLayout;
     },
 
+    renderShippingOptions: function (shipping, s) {
+
+        var optionsLayout = '';
+
+        shipping.forEach(function (option) {
+            if (!(simpleStore.productPageOptions in option)) {
+                var selectItems = '';
+                var attributeLabel = Object.keys(option)[0].trim();
+                var attributeValues = option[attributeLabel].trim().split(",");
+
+                // Set attribute values
+                $(attributeValues).each(function (attribute, attributeValue) {
+                    selectItems += '<option value="' + attributeValue.replace(/ /g, "_").toLowerCase() + '"> ' + attributeValue + ' </option>';
+                });
+
+                // Build options layout
+                if (shipping.length) {
+                    optionsLayout += '<label>' + attributeLabel + '</label><select class="item_' + attributeLabel.replace(/ /g, "_").toLowerCase() + '">' + selectItems + '</select>';
+                }
+            } else {
+                simpleStore.renderProductPageOptions(option);
+            }
+        });
+
+        return optionsLayout;
+    },
+
     renderProductPageOptions: function (option) {
         if (option.OneOfAKind) {
             $('.qty').hide();
@@ -199,6 +224,12 @@ var simpleStore = {
                     if (product.options.length) {
                         var options = simpleStore.renderProductOptions(product.options, s);
                         $('.simpleStore_options').append(options);
+                    }
+
+                    // Render shipping options
+                    if (product.shipping.length) {
+                        var shipping = simpleStore.renderShippingOptions(product.shipping, s);
+                        $('.simpleStore_shipping').append(shipping);
                     }
                     s.container.fadeIn(s.fadeSpeed);
                 }

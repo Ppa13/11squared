@@ -205,6 +205,8 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
+  width: fit-content;
+  justify-self: flex-end;
   color: #FFF;
     background-color: #040404; }
 .button.button-primary:hover,
