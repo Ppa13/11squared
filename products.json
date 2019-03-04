@@ -6,9 +6,6 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"shipping" : [
-				{ "Location" :  "Denmark,Europe"}
-			],
 		    "image" : "https://i.imgur.com/8XIYwsV.jpg",
 			"description" : "An expressive abstract piece using collage, paint and oil pastel"
 		},
