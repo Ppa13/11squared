@@ -75,7 +75,7 @@ a.hover {
     text-decoration: none;
 }
 
-.simpleCart_shelfItem label, .simpleStore_shippingLocation label {
+.simpleCart_shelfItem label{
     display: block;
     float: left;
     line-height: 40px;
@@ -155,6 +155,10 @@ a.hover {
 
 /* Cart */
 
+.shippingCountry {
+    margin-left: 20px;
+}
+
 .cart_info {
     position: absolute;
     bottom: 0px;
@@ -212,6 +216,11 @@ a.hover {
 
 .simpleStore_cart_container {
     display: none;
+}
+
+.simpleStore_shipping{
+    display: flex;
+    justify-items: center;
 }
 
 .simpleStore_cart {
