@@ -8,7 +8,7 @@
 select {
     display: block;
     float: left;
-    margin-right: 10px;
+    margin-right: 50px;
 }
 
 a.hover {
@@ -198,7 +198,7 @@ a.hover {
 .simpleStore_detailView .item_add {
     margin: 0px;
     margin-bottom: 0px;
-    margin-top: 25em;
+    margin-top: 19em;
 }
 
 .simpleStore_detailView .item_name {

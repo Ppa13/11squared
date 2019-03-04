@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/simple-store.iml" filepath="$PROJECT_DIR$/.idea/simple-store.iml" />
-      <module fileurl="file://$USER_HOME$/Downloads/zoom-master/.idea/zoom-master.iml" filepath="$USER_HOME$/Downloads/zoom-master/.idea/zoom-master.iml" />
     </modules>
   </component>
 </project>
