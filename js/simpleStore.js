@@ -171,6 +171,33 @@ var simpleStore = {
         return optionsLayout;
     },
 
+    renderShippingOptions: function (shipping, s) {
+
+        var optionsLayout = '';
+
+        shipping.forEach(function (option) {
+            if (!(simpleStore.productPageOptions in option)) {
+                var selectItems = '';
+                var attributeLabel = Object.keys(option)[0].trim();
+                var attributeValues = option[attributeLabel].trim().split(",");
+
+                // Set attribute values
+                $(attributeValues).each(function (attribute, attributeValue) {
+                    selectItems += '<option value="' + attributeValue.replace(/ /g, "_").toLowerCase() + '"> ' + attributeValue + ' </option>';
+                });
+
+                // Build options layout
+                if (shipping.length) {
+                    optionsLayout += '<label>' + attributeLabel + '</label><select class="item_' + attributeLabel.replace(/ /g, "_").toLowerCase() + '">' + selectItems + '</select>';
+                }
+            } else {
+                simpleStore.renderProductPageOptions(option);
+            }
+        });
+
+        return optionsLayout;
+    },
+
     renderProductPageOptions: function (option) {
         if (option.OneOfAKind) {
             $('.qty').hide();
@@ -198,6 +225,13 @@ var simpleStore = {
                         var options = simpleStore.renderProductOptions(product.options, s);
                         $('.simpleStore_options').append(options);
                     }
+
+                    // Render product options
+                    if (product.shipping.length) {
+                        var shipping = simpleStore.renderShippingOptions(product.shipping, s);
+                        $('.simpleCart_shipping').append(shipping);
+                    }
+
                     s.container.fadeIn(s.fadeSpeed);
                 }
             });
@@ -347,7 +381,7 @@ var simpleStore = {
         }
 
 		// Set title
-		$('title').html(s.brand);
+		$('title').html(s.title);
 	},
 
     generateCart: function (s) {
@@ -429,57 +463,8 @@ var simpleStore = {
 
 };
 
-    /*function addShippingCosts() {
-        var tmpl = $('.simpleStore_shipping').html(),
-            $tmpl = $(tmpl);
-        var shipping = $tmpl.find('.shippingCountry');
-        shipping.on('click', function (e) {
-            e.preventDefault();
-            console.log(shipping);
-        })
+    function addShippingCosts() {
+        var x = document.getElementById("shippingCountry").value;
+        console.log(x);
+
     }
-
-    var x = document.getElementById("shippingCountry").valueOf(option);
-    console.log(x);
-
-    if (x == 0) {
-        document.getElementById("cartColumns.shipping").value = this.value;
-    }
-    else  if (x == 5){
-        document.getElementById("cartColumns.shipping").value = x;
-    }
-}
-
-/*$( document ).ready(function() {
-    $( ".shippingCountry" ).click(function( event ) {
-        alert( "The link will no longer take you to jquery.com" );
-        event.preventDefault();
-    });
-});
-
-
-/*$('#shippingCountry').on('change', function (e) {
-    var optionSelected = $("option:selected", this);
-    var valueSelected = this.value;
-    console.log(optionSelected);
-    console.log(valueSelected);
-})
-
-/*var str,
-    element = document.getElementById('shippingCountry');
-if (element != null) {
-    str = element.value;
-}
-else {
-    str = null;
-}
-
-console.log(str);
-var x = document.getElementById("select").value;
-document.getElementById("cartColumns.shipping").value = x;*/
-
-
-
-    /*$( ".target" ).change(function() {
-        alert( "Handler for .change() called." );
-*/

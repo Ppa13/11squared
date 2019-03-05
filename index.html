@@ -39,6 +39,7 @@
                 <i class="fa fa-shopping-cart"></i> Cart <span class="simpleCart_total"></span>
             </a>
         </div>
+        <section class="banner"><h1>SALE - ALL T-SHIRTS 50% OFF</h1></section>
         <div class="intro_container"></div>
         <div class="simpleStore_container"></div>
         <div class="simpleStore_cart_container"></div>
@@ -56,6 +57,7 @@
                     <h5 class="item_name"></h5>
                     <div class="simpleStore_getDetail_container">
                         <div id="price-div">
+                            <span class="old_price">33€</span>
                             <span class="item_price"></span>
                             <span>€</span>
                         </div>
@@ -111,7 +113,7 @@
                     <div class="simpleStore_shipping">
                         <label>Please select the delivery location</label>
                         <!-- <select class="shippingCountry" onclick="addShippingCosts()"> -->
-                        <select class="shippingCountry">
+                        <select id="shippingCountry" onchange="addShippingCosts()">
                             <option selected="selected" value="0">Denmark</option>
                             <option value="5">Europe</option>
                         </select>
@@ -131,6 +133,7 @@
                             <div class="simpleCart_tax"></div>
                         </div>
                         <div class="cart_info_item cart_shipping">Shipping:
+                            <div class="simpleCart_shipping"></div>
                         </div>
                         <div class="cart_info_item cart_total"><b>Total:
                             <div class="simpleCart_grandTotal"></div>
@@ -139,13 +142,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </script>
-
-    <!-- Intro View -->
-    <script id="intro-view" type="x-template">
-        <div class="intro">
-            <img src="icon.png">
         </div>
     </script>
 
@@ -164,6 +160,7 @@
 			<p class="notify_text"></p>
         </div>
     </script>
+
 
 <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->

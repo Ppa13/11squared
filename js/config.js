@@ -10,7 +10,7 @@ $(function() {
 	        { attr: "quantity" , label: "Quantity" },
 	        { view: "increment" , label: false },
 			{ attr: "shipping" , label: "Shipping", view: 'currency' },
-	        { attr: "total" , label: "Price", view: 'currency' },
+	        { attr: "total" , label: "Total", view: 'currency' },
 	        { view: "remove" , text: "Remove" , label: false }
 	    ],
 
@@ -80,7 +80,9 @@ $(function() {
 		numColumns : 3,
 
 		// name of JSON file, located in directory root
-		JSONFile : "products.json"
+		JSONFile : "products.json",
+
+		title: "11SQUARED"
 
 	});
 

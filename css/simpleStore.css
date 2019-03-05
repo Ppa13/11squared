@@ -43,11 +43,11 @@ a.hover {
 	max-height: 75px;
 }
 
-/* intro */
-.intro{
-    display: block;
-    height: 500px;
-    background-color: #040404;
+.banner{
+    display: flex;
+    justify-content: center;
+    margin: 1.5em;
+    color: red;
 }
 /* simpleCart */
 
@@ -102,11 +102,19 @@ a.hover {
     width: 50px;
 }
 
+.old_price{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin-right: 1rem;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
 .item_price {
     font-weight: 700;
     font-size: 20px;
     line-height: 22px;
-    margin-right: 0.5rem;
 }
 
 .item_description {
@@ -155,7 +163,7 @@ a.hover {
 
 /* Cart */
 
-.shippingCountry {
+#shippingCountry {
     margin-left: 20px;
 }
 
