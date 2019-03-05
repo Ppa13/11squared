@@ -26,6 +26,9 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -33,16 +36,54 @@
     <!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container simpleStore">
-        <div class="row" id="nav-bar">
+        <!-- Burger menu -->
+        <div class="row" id="nav-container">
             <a class="brand" href="#"></a>
-            <a class="button button-primary u-pull-right simpleStore_viewCart">
-                <i class="fa fa-shopping-cart"></i> Cart <span class="simpleCart_total"></span>
-            </a>
+            <section class="" id="nav-bar">
+                <!--Checkbox to toggle the burger menu-->
+                <input id="togglemenu" type="checkbox" />
+                <!--Label for the checkbox to turn ON-->
+                <label id="menuon" for="togglemenu"></label>
+                <!--Label for X in burger menu-->
+                <label id="x" for="togglemenu"><i class="fas fa-times fa-1x" aria-hidden="true"></i></label>
+                <!--Label for the checkbox to turn OFF-->
+                <label class="off" id="menu-off" for="togglemenu"></label>
+                <!--Navigation bar-->
+                <nav class="breadcrumb">
+                    <!--Links in Navbar-->
+                    <a class="breadcrumb-item" href="index.html">Home</a>
+                    <a class="breadcrumb-item" href="t-shirts.html">T-Shirts</a>
+                    <a class="breadcrumb-item" href="prints.html">Prints</a>
+                    <a class="breadcrumb-item" href="about.html">About</a>
+                    <a class="button button-primary u-pull-right simpleStore_viewCart">
+                        <i class="fa fa-shopping-cart fa-2x"></i> <span class="simpleCart_total"></span>
+                    </a>
+                </nav>
+                <!--Burger Menu lines-->
+                <span class="nav-span"></span>
+                <span class="nav-span"></span>
+                <span class="nav-span"></span>
+            </section>
         </div>
         <section class="banner"><h1>SALE - ALL T-SHIRTS 50% OFF</h1></section>
         <div class="intro_container"></div>
         <div class="simpleStore_container"></div>
         <div class="simpleStore_cart_container"></div>
+        <!-- Footer -->
+        <footer>
+            <ul>
+                <li>11squared@customerservice.dk</li>
+                <li id="vertical-line">|</li>
+                <li>50 50 22 10</li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram "></i></a>
+                    <a href="#"><i class="fab fa-pinterest "></i></a>
+                </li>
+            </ul>
+        </footer>
     </div>
 
     <!-- Templates
@@ -138,7 +179,7 @@
                         <div class="cart_info_item cart_total"><b>Total:
                             <div class="simpleCart_grandTotal"></div>
                         </b></div>
-                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right" id="checkout-btn">Checkout <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
