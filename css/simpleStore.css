@@ -49,14 +49,15 @@ nav button{
 .breadcrumb-item{
     color: var(--dark);
     font-size: 1.5em;
-    margin-right: 1em;
+    margin-right: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 nav a:hover{
     color: var(--yellow);
 }
 
-/* Account button */
 nav a:active{
     color: var(--yellow);
 }
@@ -92,6 +93,89 @@ select {
 
 a {
     text-decoration: none;
+    color: black;
+}
+/* Intro template */
+.intro_container{
+
+}
+
+.section1{
+    position: relative;
+    margin: 3em 0 0 0;
+}
+
+.company-name{
+    font-size: 12em;
+    font-weight: bold;
+    color: var(--yellow);
+    text-transform: uppercase;
+    position: absolute;
+    top: -50px;
+    left: 80px;
+    z-index: 10;
+}
+
+#img1{
+    max-width: 60%;
+    position: relative;
+    z-index: 9;
+    top: 60px;
+}
+
+#img2{
+    max-width: 45%;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    z-index: 6;
+}
+
+.title-container{
+    position: absolute;
+}
+
+#lady-png{
+    width: 70%;
+    height: 100%;
+    z-index: 7;
+}
+
+.slogan-text{
+    font-size: 3.5vw;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    z-index: 8;
+}
+
+.slogan-container{
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 720px;
+    z-index: 20;
+}
+
+.slogan-text-container {
+    position: absolute;
+    left: 160px;
+    top: 150px;
+    z-index: 22;
+}
+
+.section2{
+
+}
+
+.see-more{
+
+}
+
+.section2-title{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 /* simpleCart */
