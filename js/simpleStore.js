@@ -57,17 +57,20 @@ var simpleStore = {
         var map = {
             // Main view
             '': function () {
+                $('.banner').hide();
                 simpleStore.renderMain(s);
             },
 
             //T-shirts view
             '#t-shirts': function () {
                 $('.intro_container').hide();
+                $('.banner').show();
                 simpleStore.renderProducts(simpleStore.products, s);
             },
             // Detail view
             '#product': function () {
                 $('.intro_container').hide();
+                $('.banner').hide();
                 var id = url.split('#product/')[1].trim();
                 simpleStore.renderSingleProduct(id, s);
             },
@@ -97,7 +100,6 @@ var simpleStore = {
         s.container.fadeOut(s.fadeSpeed, function () {
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
-            $('.banner').hide();
 
             var tmpl = $('#intro-template').html(),
                 $tmpl = $(tmpl);
