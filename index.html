@@ -21,18 +21,16 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/imports.min.css">
     <link rel="stylesheet" href="css/simpleStore.css">
-
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
 </head>
 <body>
-
     <!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container simpleStore">
@@ -54,7 +52,7 @@
                     <a class="breadcrumb-item" href="index.html">Home</a>
                     <a class="button button-primary u-pull-right breadcrumb-item" id="open-t-shirts">T-Shirts</a>
                     <a class="breadcrumb-item" href="prints.html">Prints</a>
-                    <a class="breadcrumb-item" href="about.html">About</a>
+                    <a class="button button-primary u-pull-right breadcrumb-item" id="open-about">About</a>
                     <a class="button button-primary u-pull-right simpleStore_viewCart">
                         <i class="fa fa-shopping-cart fa-2x"></i> <span class="simpleCart_total"></span>
                     </a>
@@ -65,12 +63,14 @@
                 <span class="nav-span"></span>
             </section>
         </div>
-        <section class="banner"><h1>SALE - ALL T-SHIRTS 50% OFF</h1></section>
+        <div class="banner">All t-shirts 50% off until 20.03.2019</div>
         <div class="intro_container"></div>
         <div class="simpleStore_container"></div>
         <div class="simpleStore_cart_container"></div>
-        <!-- Footer -->
-        <footer>
+        <div class="prints_container"></div>
+        <div class="about_container"></div>
+        <!-- Footer View -->
+        <footer id="footer-template" type="x-template">
             <ul>
                 <li>11squared@customerservice.dk</li>
                 <li id="vertical-line">|</li>
@@ -88,6 +88,7 @@
 
     <!-- Templates
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
     <!-- Intro View -->
     <script id="intro-template" type="x-template">
             <div class="section1">
@@ -108,7 +109,7 @@
                 </div>
             </div>
             <div class="section2">
-                <h3 class="section2-title">T-shirts</h3>
+                <h1 class="section2-title">T-shirts</h1>
                 <div class="slideshow"></div>
                 <a class="see-more">see more</a>
             </div>
@@ -210,6 +211,39 @@
         </div>
     </script>
 
+    <!-- Prints View -->
+    <script id="prints-template" type="x-template">
+
+    </script>
+
+    <!-- About View -->
+    <script id="about-template" type="x-template">
+        <h1 class="about-title">ABOUT</h1>
+        <section class="about-section" id="about-top-section">
+            <article class="about-txt-container" id="about-txt-upper-left">
+                <h4>
+                    We are 11 Squared and we bring two great passions together: high quality artwork & the expression of individuality.
+                    We design 11 different pieces each month exclusively for the t-shirts we sell, also incorporating guest artist’s from all backgrounds - but with the key being, there will only ever be 121 of them printed onto high-quality, 100% organic cotton T-shirts.
+                    Ever. This way you can rest assured knowing that there will only ever be 0.0001613% of the world’s population will ever have the same T-shirt design as you.
+                </h4>
+            </article>
+            <article class="about-img-container" id="about-img-upper-right">
+                <img src="images/Artboard 2.png" id="img-about-upper-right-one" alt="design">
+                <img src="images/about-img-2.jpg" id="img-about-upper-right-two" alt="design">
+            </article>
+        </section>
+        <section class="about-section" id="about-bottom-section">
+            <article class="about-img-container" id="about-img-bottom-left">
+                <img src="images/about-img-4.jpg" id="img-about-bottom-left-one" alt="design">
+                <img src="images/about-img-3.jpg" id="img-about-bottom-left-two" alt="design">
+            </article>
+            <article class="about-txt-container" id="about-txt-bottom-right">
+                <h4>Because we don’t mass produce any of our designs, we can make sure that we provide the highest quality standards and ensure that each piece is ethically produced.
+                    And an important thing to add is, that because we are dedicated to minimising our waste, each week we tally up the orders and send them to print - this way we can ensure that we only use what we need.</h4>
+            </article>
+        </section>
+    </script>
+
     <!-- Error View -->
     <script id="error-template" type="x-template">
         <div class="error">
@@ -225,7 +259,6 @@
 			<p class="notify_text"></p>
         </div>
     </script>
-
 
 <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->

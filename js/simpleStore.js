@@ -24,6 +24,8 @@ var simpleStore = {
         intro: $('.intro_container'),
         container: $('.simpleStore_container'),
         cartContainer: $('.simpleStore_cart_container'),
+        about: $('.prints_container'),
+        about: $('.about_container'),
         rowClass: 'simpleStore_row_',
         columnWidthClasses: {
             1: "",
@@ -63,11 +65,11 @@ var simpleStore = {
 
             //T-shirts view
             '#t-shirts': function () {
-                $('.intro_container').hide();
                 $('.banner').show();
+                $('.intro_container').hide();
                 simpleStore.renderProducts(simpleStore.products, s);
             },
-            // Detail view
+            // Product detail view
             '#product': function () {
                 $('.intro_container').hide();
                 $('.banner').hide();
@@ -79,6 +81,12 @@ var simpleStore = {
                 $('.intro_container').hide();
                 $('.banner').hide();
                 simpleStore.renderCart(s);
+            },
+            // About view
+            '#about': function () {
+                $('.intro_container').hide();
+                $('.banner').hide();
+                simpleStore.renderAbout(s);
             }
         };
 
@@ -97,6 +105,8 @@ var simpleStore = {
     },
 
     renderMain(s){
+        s.cartContainer.hide();
+        s.about.hide();
         s.container.fadeOut(s.fadeSpeed, function () {
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
@@ -121,6 +131,7 @@ var simpleStore = {
 
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
+
 
             // Build rows based on number of products
             for (var r = 0; r < numRows; r++) {
@@ -234,6 +245,21 @@ var simpleStore = {
         s.intro.html('').fadeIn(s.fadeSpeed);
         s.container.fadeOut(s.fadeSpeed, function () {
             s.cartContainer.fadeIn(s.fadeSpeed);
+        });
+    },
+
+    renderAbout: function (s){
+        s.intro.html('').fadeIn(s.fadeSpeed);
+
+        s.container.fadeOut(s.fadeSpeed, function () {
+            // Empty out main container on load
+            s.about.html('').fadeIn(s.fadeSpeed);
+
+            var tmpl = $('#about-template').html(),
+                $tmpl = $(tmpl);
+
+            s.intro.append($tmpl);
+            s.intro.fadeIn(s.fadeSpeed);
         });
     },
 
@@ -389,6 +415,12 @@ var simpleStore = {
         s.cartContainer.html($tmpl);
     },
 
+    generateAbout: function (s) {
+        var tmpl = $('#about-template').html(),
+            $tmpl = $(tmpl);
+        s.about.html($tmpl);
+    },
+
     generateStore: function () {
 
         var s = this.settings;
@@ -444,6 +476,11 @@ var simpleStore = {
             window.location = '#t-shirts';
         });
 
+        // Open About
+        $('#open-about').on('click', function (e) {
+            e.preventDefault();
+            window.location = '#about';
+        });
 
         // Go to home on close
         $('.view_close').on('click', function (e) {
@@ -468,3 +505,4 @@ var simpleStore = {
     },
 
 };
+
