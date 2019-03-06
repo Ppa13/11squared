@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d2e0adee-2f09-4b3a-bdc9-6a90a949e665" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/about.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/prints.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/simpleStore.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/simpleStore.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/prints.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/simpleStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/simpleStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prints.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../code/json-example/js/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../code/json-example/js/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code/json-example/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../code/json-example/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code/pokemon-example/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code/pokemon-example/css/styles.css" afterDir="false" />
@@ -41,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
+            <state relative-caret-position="1260">
               <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
             </state>
           </provider>
@@ -50,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/products.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+            <state relative-caret-position="150">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -59,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower_components/skeleton/css/skeleton.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
+            <state relative-caret-position="2070">
               <caret line="138" column="66" selection-start-line="138" selection-start-column="63" selection-end-line="138" selection-end-column="66" />
             </state>
           </provider>
@@ -68,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/simpleStore.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="512" column="15" selection-start-line="512" selection-start-column="15" selection-end-line="512" selection-end-column="15" />
+            <state relative-caret-position="481">
+              <caret line="874" column="23" selection-start-line="874" selection-start-column="23" selection-end-line="874" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -77,16 +78,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="237" column="94" lean-forward="true" selection-start-line="237" selection-start-column="94" selection-end-line="237" selection-end-column="94" />
+            <state relative-caret-position="592">
+              <caret line="606" column="12" selection-start-line="606" selection-start-column="12" selection-end-line="606" selection-end-column="12" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#3;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#5;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -95,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/simpleStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="-2378">
+              <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -110,41 +112,42 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>qty</find>
-      <find>item</find>
-      <find>item_pri</find>
-      <find>item_p</find>
-      <find>banne</find>
-      <find>span</find>
-      <find>btn</find>
-      <find>media</find>
-      <find>cartContainer</find>
-      <find>#cart</find>
-      <find>bann</find>
-      <find>img</find>
-      <find>font-famil</find>
-      <find>notify_text</find>
-      <find>t-shi</find>
-      <find>render</find>
-      <find>vw</find>
-      <find>width</find>
-      <find>a</find>
-      <find>sec</find>
-      <find>.banner</find>
-      <find>t-shirt</find>
-      <find>view_close</find>
-      <find>alert</find>
       <find>close</find>
       <find>cart</find>
       <find>footer</find>
-      <find>banner</find>
       <find>font-weight</find>
+      <find>#intro</find>
+      <find>renderProducts</find>
+      <find>view_close</find>
+      <find>intro</find>
+      <find>renderMa</find>
+      <find>main</find>
+      <find>t-shirt</find>
       <find>about</find>
+      <find>generate</find>
+      <find>product</find>
+      <find>render</find>
+      <find>in</find>
+      <find>products</find>
+      <find>bann</find>
+      <find>print-info-one</find>
+      <find>prints</find>
+      <find>t-shi</find>
+      <find>prints-conta</find>
+      <find>prints_con</find>
+      <find>fa-</find>
+      <find>empty</find>
+      <find>simpleStore_conta</find>
+      <find>home</find>
+      <find>simpleCart</find>
+      <find>foote</find>
+      <find>banner</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,6 +161,10 @@
         <option value="$PROJECT_DIR$/about.html" />
         <option value="$PROJECT_DIR$/css/about.css" />
         <option value="$PROJECT_DIR$/bower_components/skeleton/css/skeleton.css" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/js/prints.js" />
+        <option value="$PROJECT_DIR$/prints.html" />
+        <option value="$PROJECT_DIR$/css/prints.css" />
         <option value="$PROJECT_DIR$/js/simpleStore.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/simpleStore.css" />
@@ -168,9 +175,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1027" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -254,18 +260,19 @@
       <workItem from="1551716947538" duration="25082000" />
       <workItem from="1551809704280" duration="11952000" />
       <workItem from="1551866313307" duration="2912000" />
-      <workItem from="1551873385448" duration="9503000" />
+      <workItem from="1551873385448" duration="16267000" />
+      <workItem from="1551901810153" duration="10390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88681000" />
+    <option name="totallyTimeSpent" value="105835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.23931624" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.24236874" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.2147651" />
       <window_info id="npm" order="2" sideWeight="0.50141644" side_tool="true" weight="0.2147651" />
       <window_info id="Grunt " order="3" sideWeight="0.50141644" side_tool="true" weight="0.2147651" />
@@ -350,41 +357,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html" />
+    <entry file="file://$PROJECT_DIR$/css/about.css" />
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
+        <state relative-caret-position="1260">
           <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/about.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/skeleton/css/skeleton.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="2070">
           <caret line="138" column="66" selection-start-line="138" selection-start-column="63" selection-end-line="138" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/prints.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/prints.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1375">
+          <caret line="61" column="15" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prints.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="304" column="4" lean-forward="true" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/simpleStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="-2378">
+          <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -393,24 +416,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="237" column="94" lean-forward="true" selection-start-line="237" selection-start-column="94" selection-end-line="237" selection-end-column="94" />
+        <state relative-caret-position="592">
+          <caret line="606" column="12" selection-start-line="606" selection-start-column="12" selection-end-line="606" selection-end-column="12" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/simpleStore.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="512" column="15" selection-start-line="512" selection-start-column="15" selection-end-line="512" selection-end-column="15" />
+        <state relative-caret-position="481">
+          <caret line="874" column="23" selection-start-line="874" selection-start-column="23" selection-end-line="874" selection-end-column="23" />
         </state>
       </provider>
     </entry>

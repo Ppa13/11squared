@@ -21,11 +21,11 @@ var simpleStore = {
         buttonColor: null,
         backgroundColor: null,
         textColor: null,
-        intro: $('.intro_container'),
+        home: $('.home_container'),
         container: $('.simpleStore_container'),
-        cartContainer: $('.simpleStore_cart_container'),
-        about: $('.prints_container'),
+        prints: $('.prints_container'),
         about: $('.about_container'),
+        cartContainer: $('.simpleStore_cart_container'),
         rowClass: 'simpleStore_row_',
         columnWidthClasses: {
             1: "",
@@ -59,35 +59,64 @@ var simpleStore = {
         var map = {
             // Main view
             '': function () {
+                $('#footer-template').hide();
                 $('.banner').hide();
+                $('.t-shirts-title').hide();
+                $('.prints_container').hide();
+                $('.about_container').hide();
+                $('.simpleStore_cart_container').hide();
                 simpleStore.renderMain(s);
             },
 
             //T-shirts view
             '#t-shirts': function () {
+                $('#footer-template').show();
                 $('.banner').show();
-                $('.intro_container').hide();
+                $('.t-shirts-title').show();
+                $('.home_container').hide();
+                $('.prints_container').hide();
+                $('.about_container').hide();
                 simpleStore.renderProducts(simpleStore.products, s);
             },
+
             // Product detail view
             '#product': function () {
-                $('.intro_container').hide();
+                $('#footer-template').show();
                 $('.banner').hide();
+                $('.t-shirts-title').hide();
+                $('.prints_container').hide();
+                $('.about_container').hide();
                 var id = url.split('#product/')[1].trim();
                 simpleStore.renderSingleProduct(id, s);
             },
+
+            // Prints view
+            '#prints': function () {
+                $('#footer-template').show();
+                $('.t-shirts-title').hide();
+                $('.simpleStore_cart_container').hide();
+                simpleStore.renderPrints(s);
+            },
+
+            // About view
+            '#about': function () {
+                $('#footer-template').show();
+                $('.t-shirts-title').hide();
+                $('.prints_container').hide();
+                $('.simpleStore_cart_container').hide();
+                $('.banner').hide();
+                simpleStore.renderAbout(s);
+            },
+
             // Cart view
             '#cart': function () {
-                $('.intro_container').hide();
+                $('#footer-template').show();
+                $('.t-shirts-title').hide();
+                $('.prints_container').hide();
+                $('.about_container').hide();
                 $('.banner').hide();
                 simpleStore.renderCart(s);
             },
-            // About view
-            '#about': function () {
-                $('.intro_container').hide();
-                $('.banner').hide();
-                simpleStore.renderAbout(s);
-            }
         };
 
         if (map[type]) {
@@ -105,17 +134,17 @@ var simpleStore = {
     },
 
     renderMain(s){
-        s.cartContainer.hide();
-        s.about.hide();
+        /*s.cartContainer.hide();
+        s.about.hide();*/
         s.container.fadeOut(s.fadeSpeed, function () {
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
 
-            var tmpl = $('#intro-template').html(),
+            var tmpl = $('#home-template').html(),
                 $tmpl = $(tmpl);
 
-            s.intro.append($tmpl);
-            s.intro.fadeIn(s.fadeSpeed);
+            s.home.append($tmpl);
+            s.home.fadeIn(s.fadeSpeed);
         });
     },
 
@@ -242,14 +271,29 @@ var simpleStore = {
     },
 
     renderCart: function (s) {
-        s.intro.html('').fadeIn(s.fadeSpeed);
+        s.home.html('').fadeIn(s.fadeSpeed);
         s.container.fadeOut(s.fadeSpeed, function () {
             s.cartContainer.fadeIn(s.fadeSpeed);
         });
     },
 
+    renderPrints: function (s){
+        s.home.html('').fadeIn(s.fadeSpeed);
+
+        s.container.fadeOut(s.fadeSpeed, function () {
+            // Empty out main container on load
+            s.prints.html('').fadeIn(s.fadeSpeed);
+
+            var tmpl = $('#prints-template').html(),
+                $tmpl = $(tmpl);
+
+            s.prints.append($tmpl);
+            s.prints.fadeIn(s.fadeSpeed);
+        });
+    },
+
     renderAbout: function (s){
-        s.intro.html('').fadeIn(s.fadeSpeed);
+        s.home.html('').fadeIn(s.fadeSpeed);
 
         s.container.fadeOut(s.fadeSpeed, function () {
             // Empty out main container on load
@@ -258,8 +302,8 @@ var simpleStore = {
             var tmpl = $('#about-template').html(),
                 $tmpl = $(tmpl);
 
-            s.intro.append($tmpl);
-            s.intro.fadeIn(s.fadeSpeed);
+            s.about.append($tmpl);
+            s.about.fadeIn(s.fadeSpeed);
         });
     },
 
@@ -403,16 +447,22 @@ var simpleStore = {
 		$('title').html(s.title);
 	},
 
-    generateMain: function (s) {
-        var tmpl = $('#main-template').html(),
+    generateHome: function (s) {
+        var tmpl = $('#home-template').html(),
             $tmpl = $(tmpl);
-        s.intro.html($tmpl);
+        s.home.html($tmpl);
     },
 
     generateCart: function (s) {
         var tmpl = $('#cart-template').html(),
             $tmpl = $(tmpl);
         s.cartContainer.html($tmpl);
+    },
+
+    generatePrints: function (s) {
+        var tmpl = $('#prints-template').html(),
+            $tmpl = $(tmpl);
+        s.prints.html($tmpl);
     },
 
     generateAbout: function (s) {
@@ -470,10 +520,22 @@ var simpleStore = {
             window.location = '#cart';
         });
 
+        // Open Home
+        $('#open-home').on('click', function (e) {
+            e.preventDefault();
+            window.location.hash = '';
+        });
+
         // Open T-shirt
         $('#open-t-shirts').on('click', function (e) {
             e.preventDefault();
             window.location = '#t-shirts';
+        });
+
+        // Open Prints
+        $('#open-prints').on('click', function (e) {
+            e.preventDefault();
+            window.location = '#prints';
         });
 
         // Open About
@@ -505,4 +567,115 @@ var simpleStore = {
     },
 
 };
+
+// JavaScript Document
+//////////////////////////////////////////////////////////////////////////
+function openPopupOne() {
+    document.getElementById("print-info-one").style.display = "block";
+}
+
+function closePopupOne() {
+    document.getElementById("print-info-one").style.display = "none";
+}
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupTwo() {
+    document.getElementById("print-info-two").style.display = "block";
+}
+
+function closePopupTwo() {
+    document.getElementById("print-info-two").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupThree() {
+    document.getElementById("print-info-three").style.display = "block";
+}
+
+function closePopupThree() {
+    document.getElementById("print-info-three").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupFour() {
+    document.getElementById("print-info-four").style.display = "block";
+}
+
+function closePopupFour() {
+    document.getElementById("print-info-four").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupFive() {
+    document.getElementById("print-info-five").style.display = "block";
+}
+
+function closePopupFive() {
+    document.getElementById("print-info-five").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupSix() {
+    document.getElementById("print-info-six").style.display = "block";
+}
+
+function closePopupSix() {
+    document.getElementById("print-info-six").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupSeven() {
+    document.getElementById("print-info-seven").style.display = "block";
+}
+
+function closePopupSeven() {
+    document.getElementById("print-info-seven").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupEight() {
+    document.getElementById("print-info-eight").style.display = "block";
+}
+
+function closePopupEight() {
+    document.getElementById("print-info-eight").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupNine() {
+    document.getElementById("print-info-nine").style.display = "block";
+}
+
+function closePopupNine() {
+    document.getElementById("print-info-nine").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupTen() {
+    document.getElementById("print-info-ten").style.display = "block";
+}
+
+function closePopupTen() {
+    document.getElementById("print-info-ten").style.display = "none";
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+function openPopupEleven() {
+    document.getElementById("print-info-eleven").style.display = "block";
+}
+
+function closePopupEleven() {
+    document.getElementById("print-info-eleven").style.display = "none";
+}
+
+
 

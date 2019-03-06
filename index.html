@@ -36,7 +36,7 @@
     <div class="container simpleStore">
         <!-- Burger menu -->
         <div class="row" id="nav-container">
-            <a class="brand" href="#"></a>
+            <a class="brand"></a>
             <section class="" id="nav-bar">
                 <!--Checkbox to toggle the burger menu-->
                 <input id="togglemenu" type="checkbox" />
@@ -49,9 +49,9 @@
                 <!--Navigation bar-->
                 <nav class="breadcrumb">
                     <!--Links in Navbar-->
-                    <a class="breadcrumb-item" href="index.html">Home</a>
+                    <a class="button button-primary u-pull-right breadcrumb-item" id="open-home">Home</a>
                     <a class="button button-primary u-pull-right breadcrumb-item" id="open-t-shirts">T-Shirts</a>
-                    <a class="breadcrumb-item" href="prints.html">Prints</a>
+                    <a class="button button-primary u-pull-right breadcrumb-item" id="open-prints">Prints</a>
                     <a class="button button-primary u-pull-right breadcrumb-item" id="open-about">About</a>
                     <a class="button button-primary u-pull-right simpleStore_viewCart">
                         <i class="fa fa-shopping-cart fa-2x"></i> <span class="simpleCart_total"></span>
@@ -64,12 +64,13 @@
             </section>
         </div>
         <div class="banner">All t-shirts 50% off until 20.03.2019</div>
-        <div class="intro_container"></div>
+        <h1 class="t-shirts-title">T-SHIRTS</h1>
+        <div class="home_container"></div>
         <div class="simpleStore_container"></div>
         <div class="simpleStore_cart_container"></div>
         <div class="prints_container"></div>
+        <div class="prints_popup_container"></div>
         <div class="about_container"></div>
-        <!-- Footer View -->
         <footer id="footer-template" type="x-template">
             <ul>
                 <li>11squared@customerservice.dk</li>
@@ -89,8 +90,8 @@
     <!-- Templates
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <!-- Intro View -->
-    <script id="intro-template" type="x-template">
+    <!-- Home View -->
+    <script id="home-template" type="x-template">
             <div class="section1">
                 <div class="title-container">
                     <h1 class="company-name">Eleven<br>Squared</h1>
@@ -108,14 +109,9 @@
                     </div>
                 </div>
             </div>
-            <div class="section2">
-                <h1 class="section2-title">T-shirts</h1>
-                <div class="slideshow"></div>
-                <a class="see-more">see more</a>
-            </div>
     </script>
 
-    <!-- Products View -->
+    <!-- T-shirts View -->
     <script id="products-template" type="x-template">
         <div class="column">
             <div class="simpleCart_shelfItem">
@@ -135,7 +131,7 @@
         </div>
     </script>
 
-    <!-- Product Detail View -->
+    <!-- T-shirts Detail View -->
     <script id="product-detail-template" type="x-template">
         <div class="simpleCart_shelfItem simpleStore_detailView">
             <a href="#" class="close view_close">&times;</a>
@@ -213,7 +209,402 @@
 
     <!-- Prints View -->
     <script id="prints-template" type="x-template">
+        <h1 class="prints-title">PRINTS</h1>
+        <section class="prints-container">
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 1.png" class="landscape-image" onclick="openPopupOne()" alt="openhead person">
+                    <p class="title">Endless</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
 
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 2.png" class="landscape-image" onclick="openPopupTwo()" alt="woman">
+                    <p class="title">Beauty and The Man</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 3.png" class="landscape-image" onclick="openPopupThree()" alt="person with no head or legs">
+                    <p class="title">Nice to Meet You</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 4.png" class="landscape-image" onclick="openPopupFour()" alt="girl laying down on a floating island">
+                    <p class="title">A Moment, Please</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Ausrine</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 5.png" class="landscape-image" onclick="openPopupFive()" alt="two children on a floating island">
+                    <p class="title">Imagination in Two</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Ausrine</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 6.png" class="landscape-image" onclick="openPopupSix()" alt="lions fxxking">
+                    <p class="title">Lions Fxxking & Nirvana</p>
+                    <p class="price">€33</p>
+                    <p class="artist">Ausrine</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 7.png" class="landscape-image" onclick="openPopupSeven()" alt="crystals">
+                    <p class="title">Crystallize</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Ausrine</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 8.png" class="landscape-image" onclick="openPopupEight()" alt="floating human head with potatoes hanging off of it">
+                    <p class="title">Floating Head & Potato</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 9.png" class="landscape-image" onclick="openPopupNine()" alt="weird symbol">
+                    <p class="title">A Symbol</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 10.png" class="landscape-image" onclick="openPopupTen()" alt="weird flowers">
+                    <p class="title">Let Go</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
+                </article>
+            </section>
+            <section class="section-container">
+                <article class="article-container">
+                    <img src="images/Artboard 11.png" class="landscape-image" onclick="openPopupEleven()" alt="abstract collage mess">
+                    <p class="title">Monkey and Taylor</p>
+                    <p class="price">€16.5</p>
+                    <p class="artist">Chey</p>
+                </article>
+            </section>
+        </section>
+
+        <!----------POPUP1-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-one">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupOne()">RETURN</p>
+                <section class="article-container">
+                    <img src="images/Artboard 1.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Endless</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP2-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-two">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupTwo()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 2.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Beauty and The Man</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP3-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-three">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupThree()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 3.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Nice to Meet You</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP4-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-four">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupFour()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 4.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">A Moment, Please</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP5-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-five">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupFive()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 5.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Imagination in Two</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP6-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-six">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupSix()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 6.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Lions Fxxking & Nirvana</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP7-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-seven">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupSeven()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 7.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Crystallize</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP8-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-eight">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupEight()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 8.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Floating Head & Potato</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP9-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-nine">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupNine()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 9.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">A Symbol</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP10-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-ten">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupTen()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 10.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">A Symbol</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <!----------POPUP11-------------------------------------------------------------------->
+        <section class="print-popup-info" id="print-info-eleven">
+            <article class="print-info-container">
+                <p class="close-button" onclick="closePopupEleven()">RETURN</p>
+                <section class="print-info-img-margin" class="article-container">
+                    <img src="images/Artboard 11.png" class="landscape-image" alt="">
+                </section>
+                <section class="print-description">
+                    <h2 class="no-bottom-margin no-top-margin">Monkey and Taylor</h2>
+                    <p>Quick description</p>
+                    <h2>SIZE 70x50</h2>
+                    <article>
+                        <a class="cart-buyNow-btn">CART</a>
+                        <a class="cart-buyNow-btn">BUY NOW</a>
+                    </article>
+                    <article class="artist-info">
+                        <section>
+                            <h2 class="no-bottom-margin">ARTIST INFO</h2>
+                            <p>Quick description</p>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook"></i>
+                        </section>
+                        <img src="images/cheyface.png" alt="image of artist">
+                    </article>
+                </section>
+            </article>
+        </section>
+        <a href="index.html">
+            <section id="see-more-section">
+                <p id="see">SEE</p>
+                <p id="t-shirts">T-SHIRTS</p>
+            </section>
+        </a>
     </script>
 
     <!-- About View -->
