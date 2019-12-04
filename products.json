@@ -1,12 +1,48 @@
 {
 	"products" : [
 		{
+			"name" : "Let Go",
+			"price" : "16.5",
+			"options" : [
+				{ "Size" : "Small,Medium,Large" }
+			],
+			"image" : "https://i.imgur.com/Y6mJrsD.jpg",
+			"description" : "Sketch and graphics combination"
+		},
+		{
+			"name" : "Floating Head & Potato",
+			"price" : "16.5",
+			"options" : [
+				{ "Size" : "Small,Medium,Large" }
+			],
+			"image" : "https://i.imgur.com/MOokFPB.jpg",
+			"description" : "Sketched using a variety of pens and pencils"
+		},
+		{
+			"name" : "Nice to Meet You",
+			"price" : "16.5",
+			"options" : [
+				{ "Size" : "Small,Medium,Large" }
+			],
+			"image" : "https://i.imgur.com/yQTnlZg.jpg",
+			"description" : "Sketch and graphics combination"
+		},
+		{
+			"name" : "Play with me",
+			"price" : "16.5",
+			"options" : [
+				{ "Size" : "Small,Medium,Large" }
+			],
+			"image" : "https://i.imgur.com/6dGWzg4.jpg",
+			"description" : "Sketch and graphics combination"
+		},
+		{
 			"name" : "Monkey and Taylor",
 			"price" : "16.5",
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-		    "image" : "https://i.imgur.com/8XIYwsV.jpg",
+		    "image" : "https://i.imgur.com/aaolaiA.jpg",
 			"description" : "An expressive abstract piece using collage, paint and oil pastel"
 		},
 		{
@@ -15,7 +51,7 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"image" : "https://i.imgur.com/ffQlCuV.jpg",
+			"image" : "https://i.imgur.com/Gnj96wZ.jpg",
 			"description" : "A crisply sketched piece"
 		},
 		{
@@ -24,17 +60,8 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"image" : "https://i.imgur.com/4r7VDCb.jpg",
+			"image" : "https://i.imgur.com/ZyHCRem.jpg",
 			"description" : "Based on the style of Egon Schiele. Sketched work"
-		},
-		{
-			"name" : "Floating Head & Potato",
-			"price" : "16.5",
-			"options" : [
-				{ "Size" : "Small,Medium,Large" }
-			],
-			"image" : "https://i.imgur.com/39s3H94.jpg",
-			"description" : "Sketched using a variety of pens and pencils"
 		},
 		{
 			"name" : "Lions Fxxking & Nirvana",
@@ -42,7 +69,7 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"image" : "https://i.imgur.com/DRBQWF3.jpg",
+			"image" : "https://i.imgur.com/i3xZspM.jpg",
 			"description" : "Made using layers of collage"
 		},
 		{
@@ -51,7 +78,7 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"image" : "https://i.imgur.com/ND0u07A.jpg",
+			"image" : "https://i.imgur.com/i0ATEeA.jpg",
 			"description" : "Minimalistic sketch with pencils"
 		},
 		{
@@ -60,7 +87,7 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"image" : "https://i.imgur.com/EHIAD4Y.jpg",
+			"image" : "https://i.imgur.com/W8NTnWn.jpg",
 			"description" : "Collage and graphics based piece"
 		},
 		{
@@ -69,34 +96,7 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" }
 			],
-			"image" : "https://i.imgur.com/coHx0rm.jpg",
-			"description" : "Sketch and graphics combination"
-		},
-		{
-			"name" : "Nice to Meet You",
-			"price" : "16.5",
-			"options" : [
-				{ "Size" : "Small,Medium,Large" }
-			],
-			"image" : "https://i.imgur.com/PSYwiHf.jpg",
-			"description" : "Sketch and graphics combination"
-		},
-		{
-			"name" : "Let Go",
-			"price" : "16.5",
-			"options" : [
-				{ "Size" : "Small,Medium,Large" }
-			],
-			"image" : "https://i.imgur.com/3D9S0l4.jpg",
-			"description" : "Sketch and graphics combination"
-		},
-		{
-			"name" : "A Symbol",
-			"price" : "16.5",
-			"options" : [
-				{ "Size" : "Small,Medium,Large" }
-			],
-			"image" : "https://i.imgur.com/12UnvQz.jpg",
+			"image" : "https://i.imgur.com/kIs596F.jpg",
 			"description" : "Sketch and graphics combination"
 		}
 	]

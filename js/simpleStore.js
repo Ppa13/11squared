@@ -1,11 +1,3 @@
-/*
-* simplestore
-* Copyright 2015 Chris Diana
-* https://github.com/cdmedia/simplestore
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-*/
-
 var simpleStore = {
 
     products: [],
@@ -59,7 +51,6 @@ var simpleStore = {
         var map = {
             // Main view
             '': function () {
-                $('#footer-template').hide();
                 $('.banner').hide();
                 $('.t-shirts-title').hide();
                 $('.prints_container').hide();
@@ -94,6 +85,7 @@ var simpleStore = {
             '#prints': function () {
                 $('#footer-template').show();
                 $('.t-shirts-title').hide();
+                $('.about_container').hide();
                 $('.simpleStore_cart_container').hide();
                 simpleStore.renderPrints(s);
             },
@@ -134,16 +126,14 @@ var simpleStore = {
     },
 
     renderMain(s){
-        /*s.cartContainer.hide();
-        s.about.hide();*/
         s.container.fadeOut(s.fadeSpeed, function () {
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
 
-            var tmpl = $('#home-template').html(),
-                $tmpl = $(tmpl);
+            var home = $('#home-template').html(),
+                $home = $(home);
 
-            s.home.append($tmpl);
+            s.home.append($home);
             s.home.fadeIn(s.fadeSpeed);
         });
     },
@@ -447,28 +437,10 @@ var simpleStore = {
 		$('title').html(s.title);
 	},
 
-    generateHome: function (s) {
-        var tmpl = $('#home-template').html(),
-            $tmpl = $(tmpl);
-        s.home.html($tmpl);
-    },
-
     generateCart: function (s) {
         var tmpl = $('#cart-template').html(),
             $tmpl = $(tmpl);
         s.cartContainer.html($tmpl);
-    },
-
-    generatePrints: function (s) {
-        var tmpl = $('#prints-template').html(),
-            $tmpl = $(tmpl);
-        s.prints.html($tmpl);
-    },
-
-    generateAbout: function (s) {
-        var tmpl = $('#about-template').html(),
-            $tmpl = $(tmpl);
-        s.about.html($tmpl);
     },
 
     generateStore: function () {
@@ -523,7 +495,8 @@ var simpleStore = {
         // Open Home
         $('#open-home').on('click', function (e) {
             e.preventDefault();
-            window.location.hash = '';
+            window.location = '';
+
         });
 
         // Open T-shirt
@@ -567,6 +540,7 @@ var simpleStore = {
     },
 
 };
+
 
 // JavaScript Document
 //////////////////////////////////////////////////////////////////////////

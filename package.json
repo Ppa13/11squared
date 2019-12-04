@@ -1,6 +1,6 @@
 {
   "name": "simplestore",
-  "version": "1.5",
+  "version": "",
   "description": "A clean, responsive storefront boilerplate with no database or backend.",
   "main": "index.html",
   "scripts": {
@@ -26,7 +26,11 @@
     "grunt-file-append": "0.0.6"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "bower": "^1.8.8",
-    "jquery-zoom": "^1.7.21"
+    "jquery-zoom": "^1.7.21",
+    "js": "^0.1.0",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.0"
   }
 }

@@ -74,7 +74,7 @@ $(function() {
 	simpleStore.init({
 
 		// brand can be text or image URL
-		brand : "https://i.imgur.com/JdvCUVj.png",
+		brand : "https://i.imgur.com/Nu2qOk0.png?2",
 
 		// numder of products per row (accepts 1, 2 or 3)
 		numColumns : 3,
